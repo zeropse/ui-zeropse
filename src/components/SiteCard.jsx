@@ -11,7 +11,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { cn, getSiteImageSrc } from "@/lib/utils";
 
 export function SiteCard({ site }) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -53,9 +53,7 @@ export function SiteCard({ site }) {
             </div>
           ) : (
             <Image
-              src={`https://api.microlink.io/?url=${encodeURIComponent(
-                site.url,
-              )}&screenshot=true&meta=false&embed=screenshot.url`}
+              src={getSiteImageSrc(site)}
               alt={site.name}
               fill
               unoptimized={false}

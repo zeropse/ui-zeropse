@@ -4,12 +4,13 @@ import { useRef, useState } from "react";
 import BoxCarousel from "@/components/ui/box-carousel";
 import useScreenSize from "@/hooks/use-screen-size";
 import { sites } from "@/content/data";
+import { getSiteImageSrc } from "@/lib/utils";
 /* import { IconBug, IconBugOff } from "@tabler/icons-react"; */
 
 const carouselItems = sites.map((site, index) => ({
   id: String(index + 1),
   type: "image",
-  src: `https://api.microlink.io/?url=${encodeURIComponent(site.url)}&screenshot=true&meta=false&embed=screenshot.url`,
+  src: getSiteImageSrc(site),
   alt: site.name,
 }));
 

@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch-images": "bun run scripts/downloadImages.js"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.44.0",
@@ -28,6 +29,7 @@
     "@tailwindcss/postcss": "^4.3.1",
     "eslint": "^10.5.0",
     "eslint-config-next": "16.2.9",
+    "puppeteer": "^25.1.0",
     "tailwindcss": "^4.3.1"
   }
 }
