@@ -23,9 +23,9 @@ export default function FAQPage() {
         "We have strict curation standards. Every resource is manually tested to ensure it meets modern design aesthetics, has good documentation, is actively maintained, and provides genuine value to the web development community.",
     },
     {
-      question: "How can I submit my own library or tool?",
+      question: "How can I submit a new site?",
       answer:
-        "We welcome community submissions! You can submit a new site by opening an issue on our GitHub repository. Please ensure your submission meets our quality guidelines before submitting.",
+        "We welcome community submissions. To submit a new site, please open an issue on our GitHub repository and ensure that your submission meets our quality guidelines. Each submission is thoroughly reviewed before being added to the directory.",
     },
     {
       question: "Is this directory free to use?",
