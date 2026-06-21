@@ -37,7 +37,7 @@ export function HeroCarousel() {
 
   const { width, height } = getCarouselDimensions();
 
-  const toggleDebug = () => setDebug(!debug);
+  // const toggleDebug = () => setDebug(!debug);
 
   // Return a skeleton of the max expected size to prevent layout shift during SSR/hydration.
   // The actual dimensions are fixed inside the layout, so the flex container handles centering.
