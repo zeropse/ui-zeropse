@@ -17,7 +17,7 @@ const carouselItems = sites.map((site, index) => ({
 
 export function HeroCarousel() {
   const carouselRef = useRef(null);
-  const [debug, setDebug] = useState(false);
+  // const [debug, setDebug] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const screenSize = useScreenSize();
 
