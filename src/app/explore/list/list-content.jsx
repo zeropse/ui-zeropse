@@ -24,10 +24,10 @@ import {
 } from "@/components/ui/empty";
 
 export function ListContent() {
-  const [activeCategory] = useQueryState("category", {
+  const [activeCategory, setActiveCategory] = useQueryState("category", {
     defaultValue: "All",
   });
-  const [searchQuery] = useQueryState("q", {
+  const [searchQuery, setSearchQuery] = useQueryState("q", {
     defaultValue: "",
   });
 
@@ -62,6 +62,16 @@ export function ListContent() {
                 Try adjusting your search or selecting a different category.
               </EmptyDescription>
             </EmptyHeader>
+            <div className="flex justify-center">
+              <Button
+                onClick={() => {
+                  setSearchQuery(null);
+                  setActiveCategory("All");
+                }}
+              >
+                Clear Filters
+              </Button>
+            </div>
           </Empty>
         ) : (
           <div className="rounded-xl overflow-hidden border border-border/40 bg-card/80 backdrop-blur-sm shadow-[0px_8px_32px_rgba(0,0,0,0.04)]">

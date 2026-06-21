@@ -14,12 +14,13 @@ import {
   EmptyMedia,
 } from "@/components/ui/empty";
 import { IconSearch } from "@tabler/icons-react";
+import { Button } from "@/components/ui/button";
 
 export function ExploreContent() {
-  const [activeCategory] = useQueryState("category", {
+  const [activeCategory, setActiveCategory] = useQueryState("category", {
     defaultValue: "All",
   });
-  const [searchQuery] = useQueryState("q", {
+  const [searchQuery, setSearchQuery] = useQueryState("q", {
     defaultValue: "",
   });
 
@@ -53,6 +54,16 @@ export function ExploreContent() {
                 Try adjusting your search or selecting a different category.
               </EmptyDescription>
             </EmptyHeader>
+            <div className="flex justify-center">
+              <Button
+                onClick={() => {
+                  setSearchQuery(null);
+                  setActiveCategory("All");
+                }}
+              >
+                Clear Filters
+              </Button>
+            </div>
           </Empty>
         ) : (
           <VirtuosoGrid

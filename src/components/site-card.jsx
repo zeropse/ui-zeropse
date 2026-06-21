@@ -33,6 +33,7 @@ export function SiteCard({ site }) {
           shadow-sm
           transition-all
           duration-500
+          animate-in fade-in zoom-in-95
           motion-safe:hover:-translate-y-2
           hover:border-primary/20
           hover:shadow-[0px_16px_48px_rgba(0,0,0,0.06)]
@@ -102,6 +103,7 @@ export function SiteCard({ site }) {
               "
             >
               <IconArrowUpRight size={16} stroke={2.5} aria-hidden="true" />
+              <span className="sr-only">Visit {site.name}</span>
             </div>
           </div>
 
