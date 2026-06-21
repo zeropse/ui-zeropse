@@ -1,5 +1,7 @@
 # Curated UI
 
+![Curated UI](./public/og-image.png)
+
 Curated UI is a beautifully crafted directory of the best UI components, design systems, typography pairings, animations, and web design resources. It's designed to be a one-stop reference for developers and designers building modern web interfaces.
 
 ## Features

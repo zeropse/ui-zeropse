@@ -19,6 +19,39 @@ const linkClass =
 
 const year = new Date().getFullYear();
 
+const informationLinks = [
+  { name: "FAQ", href: "/faq", icon: IconHelp },
+  { name: "Privacy Policy", href: "/privacy", icon: IconShieldLock },
+  { name: "Terms of Service", href: "/terms", icon: IconFileText },
+];
+
+const contributeLinks = [
+  {
+    name: "Add a Site",
+    href: "https://github.com/zeropse/ui-zeropse/issues/new?template=site_submission.yml",
+    icon: IconPlus,
+  },
+  {
+    name: "Report a Bug",
+    href: "https://github.com/zeropse/ui-zeropse/issues/new?template=bug_report.yml",
+    icon: IconBug,
+  },
+];
+
+const socialLinks = [
+  {
+    name: "GitHub",
+    href: "https://github.com/zeropse/ui-zeropse",
+    icon: IconBrandGithub,
+  },
+  { name: "Twitter", href: "https://x.com/zer0pse", icon: IconBrandX },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/zeropse/",
+    icon: IconBrandLinkedin,
+  },
+];
+
 export function Footer() {
   return (
     <footer className="mt-32 rounded-t-[40px] bg-neutral-950 px-6 pt-24 pb-12 text-white md:rounded-t-[80px] md:px-12">
@@ -48,77 +81,46 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Community */}
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-500">
-              Community
+              Information
             </h3>
 
             <ul className="flex flex-col gap-3">
-              <li>
-                <Link
-                  href="/faq"
-                  className={`${linkClass} flex items-center gap-2 hover:underline`}
-                >
-                  <IconHelp size={16} />
-                  FAQ
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="https://github.com/zeropse/ui-zeropse/issues/new?template=site_submission.yml"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${linkClass} flex items-center gap-2 hover:underline`}
-                >
-                  <IconPlus size={16} />
-                  Add a Site
-                  <IconArrowUpRight size={16} />
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="https://github.com/zeropse/ui-zeropse/issues/new?template=bug_report.yml"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${linkClass} flex items-center gap-2 hover:underline`}
-                >
-                  <IconBug size={16} />
-                  Report a Bug
-                  <IconArrowUpRight size={16} />
-                </Link>
-              </li>
+              {informationLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className={`${linkClass} flex items-center gap-2 hover:underline`}
+                  >
+                    <link.icon size={16} />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Legal */}
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-500">
-              Legal
+              Contribute
             </h3>
 
             <ul className="flex flex-col gap-3">
-              <li>
-                <Link
-                  href="/privacy"
-                  className={`${linkClass} flex items-center gap-1.5 hover:underline`}
-                >
-                  <IconShieldLock size={16} />
-                  Privacy Policy
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/terms"
-                  className={`${linkClass} flex items-center gap-1.5 hover:underline`}
-                >
-                  <IconFileText size={16} />
-                  Terms of Service
-                </Link>
-              </li>
+              {contributeLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${linkClass} flex items-center gap-2 hover:underline`}
+                  >
+                    <link.icon size={16} />
+                    {link.name}
+                    <IconArrowUpRight size={16} />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -129,35 +131,18 @@ export function Footer() {
           </p>
 
           <div className="flex items-center gap-4">
-            <Link
-              href="https://github.com/zeropse/ui-zeropse"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-sm text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-            >
-              <IconBrandGithub size={16} />
-              GitHub
-            </Link>
-
-            <Link
-              href="https://x.com/zer0pse"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-sm text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-            >
-              <IconBrandX size={16} />
-              Twitter
-            </Link>
-
-            <Link
-              href="https://www.linkedin.com/in/zeropse/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-sm text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-            >
-              <IconBrandLinkedin size={16} />
-              LinkedIn
-            </Link>
+            {socialLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 rounded-sm text-sm text-stone-100 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              >
+                <link.icon size={16} />
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
