@@ -14,59 +14,28 @@ export const metadata = {
 const privacySections = [
   {
     title: "1. Introduction",
-    content: (
-      <>
-        Welcome to Curated UI ("we," "our," or "us"). We respect your privacy
-        and are deeply committed to protecting it. This Privacy Policy explains
-        our practices regarding the collection, use, and disclosure of
-        information that you may provide via our directory.
-      </>
-    ),
+    content:
+      'Welcome to Curated UI ("we," "our," or "us"). We respect your privacy and are deeply committed to protecting it. This Privacy Policy explains our practices regarding the collection, use, and disclosure of information that you may provide via our directory.',
   },
   {
     title: "2. The Data We Collect",
-    content: (
-      <>
-        We believe in data minimization. We do <strong>not</strong> track,
-        collect, or store any personally identifiable information from our
-        visitors. We use simple, privacy-respecting analytics (which do not use
-        cookies or collect IP addresses) solely to understand overall website
-        traffic and usage patterns.
-      </>
-    ),
+    content:
+      "We believe in data minimization. We do not track, collect, or store any personally identifiable information from our visitors. We use simple, privacy-respecting analytics (which do not use cookies or collect IP addresses) solely to understand overall website traffic and usage patterns.",
   },
   {
     title: "3. Third-Party Links & External Sites",
-    content: (
-      <>
-        Our core service is providing links to third-party tools, libraries, and
-        design systems. When you click on these links, you will be directed to
-        that third party&apos;s site. We strongly advise you to review the
-        Privacy Policy of every site you visit. We have no control over and
-        assume no responsibility for the content, privacy policies, or practices
-        of any third-party sites or services.
-      </>
-    ),
+    content:
+      "Our core service is providing links to third-party tools, libraries, and design systems. When you click on these links, you will be directed to that third party&apos;s site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.",
   },
   {
     title: "4. Data Security",
-    content: (
-      <>
-        While we do not collect personal data, we still prioritize the security
-        of our platform. We use commercially acceptable means to protect our
-        website and ensure it remains a safe directory for all users.
-      </>
-    ),
+    content:
+      "While we do not collect personal data, we still prioritize the security of our platform. We use commercially acceptable means to protect our website and ensure it remains a safe directory for all users.",
   },
   {
     title: "5. Changes to This Privacy Policy",
-    content: (
-      <>
-        We may update our Privacy Policy from time to time. Any changes will be
-        posted on this page with an updated "Effective Date." We encourage you
-        to review this Privacy Policy periodically for any changes.
-      </>
-    ),
+    content:
+      'We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Effective Date." We encourage you to review this Privacy Policy periodically for any changes.',
   },
 ];
 

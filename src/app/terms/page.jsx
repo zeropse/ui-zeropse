@@ -15,7 +15,7 @@ const termsSections = [
   {
     title: "1. Agreement to Terms",
     content:
-      'By accessing or using Curated UI (the "Directory"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the service.',
+      "By accessing or using Curated UI, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the service.",
   },
   {
     title: "2. Use of the Directory",

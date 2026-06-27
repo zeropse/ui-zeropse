@@ -42,7 +42,7 @@ export default function FAQPage() {
     {
       question: "How often do you add new resources?",
       answer:
-        "We update the directory on a weekly basis, adding newly discovered gems and reviewing community submissions.",
+        "We update the directory on a weekly basis, adding newly discovered gems and reviewing submissions.",
     },
     {
       question: "Do you rank or sponsor specific libraries?",
